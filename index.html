@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title>
+    <link rel="icon" href="icon/calculate_24dp_FILL0_wght400_GRAD0_opsz24 (2).svg" type="image/x-icon">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand">
+                    <img src="icon/calculate_24dp_FILL0_wght400_GRAD0_opsz24 (2).svg" alt="Logo" width="30" height="24"
+                        class="d-inline-block align-text-top">
+                    Калькулятор
+                </a>
+
+                <div class="dropdown">
+                    <button class="btn btn-outline-light" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img src="icon/routine_24dp_FILL0_wght400_GRAD0_opsz24.svg" alt="Logo" width="30" height="24"
+                            class="d-inline-block align-text-top">
+                        Тема
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" id="dark"><img
+                                src="icon/clear_night_24dp_FILL0_wght400_GRAD0_opsz24.svg" alt="Logo" width="30"
+                                height="24" class="d-inline-block align-text-top">
+                            Тёмная</a>
+                        <hr>
+                        <a class="dropdown-item" id="light"><img src="icon/wb_sunny_24dp_FILL0_wght400_GRAD0_opsz24.svg"
+                                alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                            Светлая</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-fluid mx-auto mt-5">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-6 col-sm-12">
+                <div class="card bg-transparent">
+                    <div class="card-body py-6 text-center"> 
+                        <input type="text" id="display" class="form-control mb-3 h-50 py-4" disabled>
+                        <div class="row mt-3">  
+                            <div class="col-2"> 
+                                <button class="btn btn-outline-primary btn-block w-100 my-3 mx-3" id="first" onclick="addToDisplay('7')">7</button>
+                                <button class="btn btn-outline-primary btn-block w-100 my-3 mx-3" onclick="addToDisplay('4')">4</button>
+                                <button class="btn btn-outline-primary btn-block w-100 my-3 mx-3" onclick="addToDisplay('1')">1</button>
+                                <button class="btn btn-outline-danger btn-block w-100 my-3 mx-3" onclick="clearDisplay()">C</button>
+                            </div>
+                            <div class="col-2">
+                                <button class="btn btn-outline-primary btn-block w-100 my-3 mx-3" onclick="addToDisplay('8')">8</button>
+                                <button class="btn btn-outline-primary btn-block w-100 my-3 mx-3" onclick="addToDisplay('5')">5</button>
+                                <button class="btn btn-outline-primary btn-block w-100 my-3 mx-3" onclick="addToDisplay('2')">2</button>
+                                <button class="btn btn-outline-primary btn-block w-100 my-3 mx-3" onclick="addToDisplay('0')">0</button>
+                            </div>
+                            <div class="col-2">
+                                <button class="btn btn-outline-primary btn-block w-100 my-3 mx-3" onclick="addToDisplay('9')">9</button>
+                                <button class="btn btn-outline-primary btn-block w-100 my-3 mx-3" onclick="addToDisplay('6')">6</button>
+                                <button class="btn btn-outline-primary btn-block w-100 my-3 mx-3" onclick="addToDisplay('3')">3</button>
+                                <button class="btn btn-outline-warning btn-block w-100 my-3 mx-3" onclick="addToDisplay('/')">/</button>
+                            </div>
+                            <div class="col-2">
+                                <button class="btn btn-outline-warning btn-block w-100 my-3 mx-3" onclick="addToDisplay('+')">+</button>
+                                <button class="btn btn-outline-warning btn-block w-100 my-3 mx-3" onclick="addToDisplay('-')">-</button>
+                                <button class="btn btn-outline-warning btn-block w-100 my-3 mx-3" onclick="addToDisplay('*')">*</button>
+                                <button class="btn btn-outline-secondary btn-block w-100 my-3 mx-3" onclick="addToDisplay('(')">(</button>
+                            </div>
+                            <div class="col-2">
+                                <button class="btn btn-outline-success btn-block w-100 my-3 mx-3" id="second" onclick="calculate()">=</button>
+                                <button class="btn btn-outline-info btn-block w-100 my-3 mx-3" onclick="power()">a<sup>n</sup></button>
+                                <button class="btn btn-outline-info btn-block w-100 my-3 mx-3" onclick="sqrtNum()">√</button>
+                                <button class="btn btn-outline-secondary btn-block w-100 my-3 mx-3" onclick="addToDisplay(')')">)</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
